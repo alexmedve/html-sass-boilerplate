@@ -1,0 +1,18 @@
+@use '../../abstracts' as *;
+
+.button {
+    &,
+    &:link,
+    &:visited {
+        
+    }
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-primary;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

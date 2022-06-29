@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('../../assets/fonts/Montserrat/Montserrat-ExtraLight.woff2') format('woff2');
+}
+
+.heading-1 {
+    
+}
+
+.body-copy {
+
+}
+
+.link {
+    &,
+    &:link,
+    &:visited {
+        
+    }
+}
