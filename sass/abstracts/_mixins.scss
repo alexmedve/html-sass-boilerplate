@@ -1,5 +1,6 @@
 @use './variables' as *;
 
+//center items
 @mixin center-abs {
     position: absolute;
     top: 50%;
@@ -12,6 +13,50 @@
     align-items: center;
     justify-content: center;
 }
+
+//
+$z-indexes: (
+    'modal',
+    'site-nav',
+    'site-header',
+    'site-content',
+    'site-footer'
+);
+
+@function z($name, $z-indexes-list: $z-indexes) {
+    @if index($z-indexes-list, $name) {
+        @return (length($z-indexes-list) - index($z-indexes-list, $name)) + 1;
+    } @else {
+        @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes-list}';
+    
+        @return null;
+    }
+}
+
+//set fixed aspect ratio to an element
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+//sets the same style for the input placeholder
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+//media breakpoints
 
 @mixin media-breakpoint-up($breakpoint) {
     
