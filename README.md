@@ -20,6 +20,12 @@ npm install
 npm run start
 ```
 
+## Build CSS
+
+```sh
+npm run build:css
+```
+
 ## Author
 
 👤 **Alexandru Medvedeu**
