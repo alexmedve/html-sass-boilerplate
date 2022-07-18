@@ -28,6 +28,22 @@
     text-transform: capitalize;
 }
 
+$textAlignments: ("left", "right", "center", "revert");
+
+@each $textAlign in $textAlignments {
+    .text-#{$textAlign} {
+        text-align: #{$textAlign};
+    }
+}
+
+$textTransforms: ("lowercase", "capitalize", "uppercase", "justify");
+
+@each $textCase in $textTransforms {
+    .text-#{$textCase} {
+        text-align: #{$textCase};
+    }
+}
+
 $spaceAmounts: (8, 16, 24, 32, 40, auto);
 
 @each $space in $spaceAmounts {
@@ -129,18 +145,10 @@ $spaceAmounts: (8, 16, 24, 32, 40, auto);
     }
 }
 
-$textAlignments: ("left", "right", "center", "revert");
+$displayModes: ("none", "block", "flex", "grid", "inline", "inline-block", "unset");
 
-@each $textAlign in $textAlignments {
-    .text-#{$textAlign} {
-        text-align: #{$textAlign};
-    }
-}
-
-$textTransforms: ("lowercase", "capitalize", "uppercase", "justify");
-
-@each $textCase in $textTransforms {
-    .text-#{$textCase} {
-        text-align: #{$textCase};
+@each $displayMode in $displayModes {
+    .display-#{$displayMode} {
+        display: #{$displayMode};
     }
 }

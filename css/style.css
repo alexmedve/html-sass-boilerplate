@@ -140,6 +140,38 @@
   text-transform: capitalize;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-revert {
+  text-align: revert;
+}
+
+.text-lowercase {
+  text-align: lowercase;
+}
+
+.text-capitalize {
+  text-align: capitalize;
+}
+
+.text-uppercase {
+  text-align: uppercase;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .m-8 {
   margin: 8px;
 }
@@ -470,36 +502,32 @@
   margin-top: auto;
 }
 
-.text-left {
-  text-align: left;
+.display-none {
+  display: none;
 }
 
-.text-right {
-  text-align: right;
+.display-block {
+  display: block;
 }
 
-.text-center {
-  text-align: center;
+.display-flex {
+  display: flex;
 }
 
-.text-revert {
-  text-align: revert;
+.display-grid {
+  display: grid;
 }
 
-.text-lowercase {
-  text-align: lowercase;
+.display-inline {
+  display: inline;
 }
 
-.text-capitalize {
-  text-align: capitalize;
+.display-inline-block {
+  display: inline-block;
 }
 
-.text-uppercase {
-  text-align: uppercase;
-}
-
-.text-justify {
-  text-align: justify;
+.display-unset {
+  display: unset;
 }
 
 .button:hover {

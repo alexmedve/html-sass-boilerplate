@@ -14,23 +14,12 @@
     justify-content: center;
 }
 
-//
-$z-indexes: (
-    'modal',
-    'site-nav',
-    'site-header',
-    'site-content',
-    'site-footer'
-);
-
-@function z($name, $z-indexes-list: $z-indexes) {
-    @if index($z-indexes-list, $name) {
-        @return (length($z-indexes-list) - index($z-indexes-list, $name)) + 1;
-    } @else {
-        @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes-list}';
-    
-        @return null;
-    }
+@mixin cover-abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 //set fixed aspect ratio to an element
